@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer table</title>
+</head>
+<style>
+    table{
+        border: 2px solid black;
+        margin-top: 40px;
+        margin-left: 30%;
+    }
+    th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th{
+    background-color: rgb(74, 74, 159);
+}
+</style>
+<body>
+    <table>
+        <tr>
+           <th>customer_id</th><th>customer_name</th><th>email</th><th>balance</th> 
+     
+           <% for (let i=0;i<user.length;i++) {%>
+            <tr>
+             <td><%= user[i].Customer_id %></td>
+             <td><%= user[i].Cutomer_name %></td>
+             <td><%= user[i].Email%></td>
+             
+            </tr>      
+        <% } %>
+        
+     </table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Table</title>
+</head>
+<style>
+    table{
+        border: 2px solid black;
+        margin-top: 40px;
+        margin-left: 30%;
+    }
+    th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th{
+    background-color: rgb(74, 74, 159);
+}
+</style>
+<body>
+    <table>
+        <tr>
+           <th>Product_id</th><th>Product_type</th><th>Product_name</th><th>Product_price</th><th>Available_quantity</th>
+        </tr>
+     
+        <% for (let i=0;i<user.length;i++) {%>
+            <tr>
+             <td><%= user[i].Inventory_id %></td>
+             <td><%= user[i].InventoryType %></td>
+             <td><%= user[i].ItemName%></td>
+             <td><%= user[i].AvailableQuantity %></td>
+            </tr>      
+        <% } %>
+     </table>
+</body>
+</html>
